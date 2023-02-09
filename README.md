@@ -1,5 +1,5 @@
 # PaginaEspecialidad
 
-SCRUM: Carlos
+SCRUM: Carlos\n
 FRONTEND: Carlos
 BACKEND: Carlos
