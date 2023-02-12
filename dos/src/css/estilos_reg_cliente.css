@@ -128,7 +128,8 @@ input[type=password]{
   margin-bottom: 25px;
 }
 
-#icon {
+.envelope-icon{
+  background-image: url('dos\src\images\envelope-icon-14.png');
   display: inline-block;
   width: 30px;
   background-color: #3a57af;
