@@ -1,0 +1,31 @@
+
+<link rel="stylesheet" href="./src/css/estilos_reg_cliente.css">
+
+<div class="testbox">
+  <h1>Registration</h1>
+
+  <form action="/">
+      <hr>
+    <div class="tipoDeCuenta">
+      <input type="radio" value="None" id="radioUno" name="cuenta" checked/>
+      <label for="radioUno" class="radio" chec>Cliente</label>
+      <input type="radio" value="None" id="radioDos" name="cuenta" />
+      <label for="radioDos" class="radio">Provedor</label>
+    </div>
+  <hr>
+  <label id="icon" for="name"><i class="envelope-icon "><img src="./src/images/envelope-icon-14.png" height="16px" width="14px"></i></label>
+  <input type="text" name="name" id="name" placeholder="Email" required/>
+  <label id="icon" for="name"><i class="usuario-icon"><img src="./src/images/usuario.png" height="16px" width="14px"></i></label>
+  <input type="text" name="name" id="name" placeholder="Name" required/>
+  <label id="icon" for="name"><i class="shield-icon"><img src="./src/images/shield-icon.png" height="16px" width="14px"></i></label>
+  <input type="password" name="name" id="name" placeholder="Password" required/>
+  <div class="gender">
+    <input type="radio" value="None" id="hombre" name="gender" checked/>
+    <label for="hombre" class="radio" chec>Hombre</label>
+    <input type="radio" value="None" id="mujer" name="gender" />
+    <label for="mujer" class="radio">Mujer</label>
+   </div> 
+   <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+   <a href="#" class="button">Register</a>
+  </form>
+</div>
