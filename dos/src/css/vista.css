@@ -83,6 +83,7 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
@@ -127,6 +128,7 @@ button,
 select {
   text-transform: none;
 }
+
 button,
 html [type="button"],
 [type="reset"],
