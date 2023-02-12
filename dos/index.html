@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca21a15e6d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dos/src/css/estilos.css">
     <title>Pagina Principal</title>
 </head>
 <body>
+    <div class="container">
+    <header class="header">
+        <div class="buscador">
+            <input type="text" class="search">
+            <button id="search" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="login">    
+            <button id="signin" type="button">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </header>
     <div class="contenedor-menu">
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Iniciar sesion</a></li>
-            </ul>
-        </nav>
         <div class="menu-descripcion">
             <h4>Servicios medicos online</h4>
             <h1>Atiende tus necesidades desde casa</h1>
@@ -28,5 +41,6 @@
     <footer>
         <p>Este es el footer</p>
     </footer>
+    </div>
 </body>
 </html>
