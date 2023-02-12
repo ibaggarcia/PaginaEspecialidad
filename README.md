@@ -1,3 +1,3 @@
 # PaginaEspecialidad
-#SCRUM Noe
+#SCRUM Carlos Noe Gabriel Moy
 
