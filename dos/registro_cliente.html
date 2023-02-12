@@ -27,7 +27,7 @@
   <div class="testbox">
     <h1>Registrarse</h1>
   
-    <form action="/">
+    <form action="./src/php/registro.php" method="post">
       <hr>
         <div class="tipoDeCuenta">
           <input type="radio" value="cliente" id="cliente" name="cuenta" checked/>
@@ -42,8 +42,8 @@
       <input type="text" name="nombre" id="name" placeholder="Nombre" required/>
       <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
       <input type="password" name="contraseña" id="name" placeholder="Contraseña" required/>
-      <label id="icon" for="telefono"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
-      <input id="phone" type="text" name="telefono" required/>
+      <label id="icon" for="phone"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
+      <input id="phone" type="text" name="phone" required/>
       <label for="pais">Pais</label>
                 <select name="pais">
                     <option value="NA" selected>Selecciona una opcion</option>
@@ -249,7 +249,7 @@
           <label for="mujer" class="radio">Mujer</label>
         </div> 
         <p>Haz click aqui para checar <a href="#">Terminos y condiciones</p>
-        <a href="#" class="button">Register</a>
+        <input type="submit" value="Registrarse">
     </form>
     <div class="alert alert-info" style="display: none;"></div>
   </div>
@@ -260,16 +260,6 @@
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
-    const info = document.querySelector(".alert-info");
-
-    function process(event) {
-    event.preventDefault();
-
-    const phoneNumber = phoneInput.getNumber();
-
-    info.style.display = "";
-    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
-  }
 </script>
 </html>
 
