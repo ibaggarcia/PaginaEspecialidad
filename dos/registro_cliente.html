@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/estilos_reg_cliente.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
@@ -13,19 +16,17 @@
   <title>Registro</title>
 </head>
 <body>
-  <header class="u-clearfix u-header u-header" id="sec-02a8"> 
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-            <div class="u-nav-container">
-                <a href="./inicio_sesion.html"><img src="./src/images/usuario.png" height="35px" width="35px"></a>
-            </div>
-        </nav>
-    </div>
-  </header>
 
+  <header class="u-clearfix u-header u-header" id="sec-02a8">
+    <div class="header">
+        <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
+        <div class="u-nav-container">
+            <a class="user" href="./inicio_sesion.html"><i style="color: black" class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+</header>
   <div class="testbox">
-    <h1>Registrarse</h1>
+    <h1 style="font-weight: bold;">Registro</h1>
   
     <form action="./src/php/registro.php" method="post">
       <hr>
@@ -42,10 +43,10 @@
       <input type="text" name="nombre" id="name" placeholder="Nombre" required/>
       <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
       <input type="password" name="contraseña" id="name" placeholder="Contraseña" required/>
-      <label id="icon" for="phone"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
-      <input id="phone" type="text" name="phone" required/>
-      <label for="pais">Pais</label>
-                <select name="pais">
+      <label id="icon" for="telefono"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
+      <input id="phone" type="text" class="phone" name="telefono" required/>
+      <label id="icon" for="pais"><i class="fa-brands fa-font-awesome"></i></label>
+                <select class="pais" name="pais">
                     <option value="NA" selected>Selecciona una opcion</option>
                     <option value="Afganistán">Afganistán</option>
                     <option value="Albania">Albania</option>
@@ -248,8 +249,12 @@
           <input type="radio" value="mujer" id="mujer" name="gender" />
           <label for="mujer" class="radio">Mujer</label>
         </div> 
-        <p>Haz click aqui para checar <a href="#">Terminos y condiciones</p>
-        <input type="submit" value="Registrarse">
+        <div class="foot">
+          <div>
+            <p style="font-weight: bold;">Haz click aqui para checar <a href="#">Terminos y condiciones</a></p>
+          </div>
+          <a href="#" class="button">Registrarse</a>
+        </div>        
     </form>
     <div class="alert alert-info" style="display: none;"></div>
   </div>
