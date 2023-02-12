@@ -1,7 +1,6 @@
  .u-section-1 {
   background-image: url("../images/sd-min.jpg");
-  min-height: 1017px;
-  background-position: 50% 50%;
+  background-position: left center;
 }
 
 .u-section-1 .u-layout-wrap-1 {
@@ -556,5 +555,10 @@
 
   .u-section-4 .u-text-1 {
     font-size: 3.75rem;
+  }
+
+  .u-section-1 {
+    background-position: -600px center;
+    background-repeat: no-repeat;
   }
 }
