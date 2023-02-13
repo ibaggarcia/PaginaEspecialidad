@@ -1,5 +1,9 @@
  .u-section-1 {
+<<<<<<< HEAD
   background-image: url("bg");
+=======
+  background-image: url("../images/bg.jpg");
+>>>>>>> ramab
   background-position: left center;
 }
 
@@ -46,9 +50,9 @@
 
 .u-section-1 .u-image-1 {
   min-height: 626px;
-  background-image: url("/dos/src/images/sd-min.jpg");
-  background-position: 50% 50%;
-}
+  background-image: url("../images/sd-min.jpg"); 
+   background-position: 50% 50%;
+} 
 
 .u-section-1 .u-layout-wrap-2 {
   width: 1140px;
