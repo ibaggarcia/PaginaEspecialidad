@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Inicio</title>
+    <script src="https://kit.fontawesome.com/ca21a15e6d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/modal.css" media="screen">
     <link rel="stylesheet" href="./src/css/vista.css" media="screen">
     <link rel="stylesheet" href="./src/css/Casa.css" media="screen">
     <meta name="generator" content="Nicepage 5.4.4, nicepage.com">
@@ -19,19 +21,26 @@
             <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
                 <div class="u-nav-container">
-                    <a id = "abrir-modal"><img src="./src/images/usuario.png" height="35px" width="35px"></a>
-                    <dialog id = "modal">
-                        <div class="contenedor">
-                            <form action="">
-                                <label for="email">Email</label>
-                                <input type="email" name="email"> <br>
-                                <label for="contraseña">Contraseña</label> 
-                                <input type="password" name="contraseña"> <br>
-                                <input type="submit" value="Iniciar sesion">
-                                <a href="./registro_cliente.html">ó registrate</a> <br>
-                                <a href="#">Olvidaste tu contraseña?</a>
-                            </form>
+                    <button id = "abrir-modal"><img src="./src/images/usuario.png" height="35px" width="35px"></button>
+                    <div id="modallogin" class="modal">
+                        <span class="close">&times;</span>
+                            <div class="contenedor">
+
+                                <div class="testbox">
+                                <h1>Login</h1>
+                                <form action="">
+                                    <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></label>
+                                    <input type="text" name="email" placeholder="Email"> <br>
+                                    <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label> 
+                                    <input type="password" name="contraseña" placeholder="Contraseña"> <br>
+                                    <input type="submit" value="Iniciar sesion" class="boton">
+                                    <a href="./registro_cliente.html" class="button">ó registrate</a> <br>
+                                    <a href="#" class="button">Olvidaste tu contraseña?</a>
+                                </form>
+                                </div>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </nav>
         </div>
