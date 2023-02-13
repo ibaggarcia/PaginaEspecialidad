@@ -27,9 +27,18 @@
     </header>
 
     <div class="testbox">
-        <form action="">
+        <h1 style="font-weight: bold;">Inicio de sesion</h1>
+        <form action="./src/php/inicio_sesion.php" method="post">
+            <hr>
+                <div class="tipoDeCuenta">
+                <input type="radio" value="cliente" id="cliente" name="cuenta" checked/>
+                <label for="cliente" class="radio" >Cliente</label>
+                <input type="radio" value="proveedor" id="proveedor" name="cuenta" />
+                <label for="proveedor" class="radio">Proveedor</label>
+            </div>
+            <hr>
             <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></label>
-            <input type="text" name="email" placeholder="Email"> <br>
+            <input type="email" name="email" placeholder="Email"> <br>
             <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label> 
             <input type="password" name="contraseña" placeholder="Contraseña"> <br>
             <input type="submit" value="Iniciar sesion" class="boton">

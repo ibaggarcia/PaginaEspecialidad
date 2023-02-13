@@ -1,5 +1,6 @@
 <?php
 include("bd.php");
+$host = $_SERVER['HTTP_HOST'];
 
 $tipo_usuario = $_POST['cuenta'];
 $email = $_POST['email'];
@@ -22,9 +23,8 @@ else
 
 $rs = mysqli_query($conn, $registro);
 if ($rs) {
-    echo "Se ha registrado";
+    header("location: http://$host/PaginaEspecialidad/dos/index.html");
 } else {
     echo "No se pudo registrar";
 }
-
 ?>
