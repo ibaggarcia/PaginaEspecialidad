@@ -5,7 +5,7 @@ $tipo_usuario = $_POST['cuenta'];
 $email = $_POST['email'];
 $nombre = $_POST['nombre'];
 $contraseña = $_POST['contraseña'];
-$telefono = $_POST['phone'];
+$telefono = $_POST['telefono'];
 $pais = $_POST['pais']; 
 $genero = $_POST['gender'];
 
