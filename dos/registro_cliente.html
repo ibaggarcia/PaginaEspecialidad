@@ -16,7 +16,6 @@
   <title>Registro</title>
 </head>
 <body>
-
   <header class="u-clearfix u-header u-header" id="sec-02a8">
     <div class="header">
         <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
@@ -24,11 +23,11 @@
             <a class="user" href="./inicio_sesion.html"><i style="color: black" class="fa-solid fa-user"></i></a>
         </div>
     </div>
-</header>
+  </header>
   <div class="testbox">
     <h1 style="font-weight: bold;">Registro</h1>
   
-    <form action="/">
+    <form action="./src/php/registro.php" method="post">
       <hr>
         <div class="tipoDeCuenta">
           <input type="radio" value="cliente" id="cliente" name="cuenta" checked/>
@@ -253,7 +252,7 @@
           <div>
             <p style="font-weight: bold;">Haz click aqui para checar <a href="#">Terminos y condiciones</a></p>
           </div>
-          <a href="#" class="button">Registrarse</a>
+          <input type="submit" value="Registrarse" class="boton">
         </div>        
     </form>
     <div class="alert alert-info" style="display: none;"></div>
@@ -265,16 +264,6 @@
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
-    const info = document.querySelector(".alert-info");
-
-    function process(event) {
-    event.preventDefault();
-
-    const phoneNumber = phoneInput.getNumber();
-
-    info.style.display = "";
-    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
-  }
 </script>
 </html>
 
