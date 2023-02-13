@@ -1,7 +1,7 @@
 #modallogin .testbox {
     margin: 20px auto;
     width: 343px; 
-    height: 320px; 
+    height: 370px; 
     -webkit-border-radius: 8px/7px; 
     -moz-border-radius: 8px/7px; 
     border-radius: 8px/7px; 
@@ -9,7 +9,7 @@
     -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    border: solid 1px #cbc9c9;
+    border: solid 1px #cbc9c9; 
   }
   
 #modallogin .tipoDeCuenta {
@@ -92,7 +92,7 @@
     opacity: 0.3;
   }
   
-#modallogin input[type=text],input[type=password]{
+#modallogin input[type=text],input[type=password], input[type=email]{
     width: 200px; 
     height: 39px; 
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
@@ -112,22 +112,22 @@
     margin-bottom: 25px;
   }
   
-  #icon{
-    background-image: url('.\src\images\envelope-icon-14.png');
-    display: inline-block;
-    width: 30px;
-    background-color: #3a57af;
-    padding: 8px 0px 8px 15px;
-    margin-left: 15px;
-    -webkit-border-radius: 4px 0px 0px 4px; 
-    -moz-border-radius: 4px 0px 0px 4px; 
-    border-radius: 4px 0px 0px 4px;
-    color: white;
-    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
-    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    border: solid 0px #cbc9c9;
-  }
+#icon{
+  background-image: url('.\src\images\envelope-icon-14.png');
+  display: inline-block;
+  width: 30px;
+  background-color: #3a57af;
+  padding: 8px 0px 8px 15px;
+  margin-left: 15px;
+  -webkit-border-radius: 4px 0px 0px 4px; 
+  -moz-border-radius: 4px 0px 0px 4px; 
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 0px #cbc9c9;
+}
   
 #modallogin .gender {
     margin-left: 30px;
@@ -247,12 +247,12 @@
     margin-bottom: 10px;
   }
 
-  #modallogin #icon{
+#modallogin #icon{
     background-image: url('.\src\images\envelope-icon-14.png');
     display: inline-block;
     width: 30px;
     background-color: #3a57af;
-    padding: 8px 0px 8px 15px;
+    padding: 8px 30px 8px 15px;
     margin-left: 15px;
     -webkit-border-radius: 4px 0px 0px 4px; 
     -moz-border-radius: 4px 0px 0px 4px; 
@@ -262,4 +262,4 @@
     -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
     box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
     border: solid 0px #cbc9c9;
-  }
+}
