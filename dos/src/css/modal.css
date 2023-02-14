@@ -1,7 +1,18 @@
+#modallogin {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.contenedor {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
 #modallogin .testbox {
     margin: 20px auto;
     width: 343px; 
-    height: 370px; 
+    height: 420px; 
     -webkit-border-radius: 8px/7px; 
     -moz-border-radius: 8px/7px; 
     border-radius: 8px/7px; 
@@ -10,24 +21,43 @@
     -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     border: solid 1px #cbc9c9; 
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+  }
+
+  .headModal {
+    display: grid;
+    grid-template-columns: 1fr 10px;
   }
   
 #modallogin .tipoDeCuenta {
     display: flex;
     padding-top: 10px;
-    justify-content: center;
+    padding-left: 15px;
+    font-weight: light;
   }
-  
-#modallogin .tipoDeCuenta label {
-    padding-top: 2px;
-  }
-  
-#modallogin .gender label {
-    padding-top: 2px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-  
+
+#modallogin span {
+  margin-left: -20px;
+}
+
+.login {
+  display: grid;
+  grid-template-rows: repeat(4, 70px);
+}
+
+.btnlog {
+  padding: 0;
+  width: 125px;
+  font-size: 1px;
+}
+
+.formulario {
+  height: 350px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
 #modallogin .foot {
     height: 50px;
     margin-top: -15px;
@@ -88,8 +118,8 @@
   }
   
 #modallogin hr{
-    color: #a9a9a9;
-    opacity: 0.3;
+    /* color: #a9a9a9;
+    opacity: 0.3; */
   }
   
 #modallogin input[type=text],input[type=password], input[type=email]{
@@ -262,4 +292,8 @@
     -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
     box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
     border: solid 0px #cbc9c9;
+}
+
+#modallogin h1 {
+  font-weight: bold;
 }
