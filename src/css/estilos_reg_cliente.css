@@ -13,7 +13,8 @@ body {
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 10px 1fr 10px;
-  grid-template-rows: 80px 1fr 5fr 1fr;
+  grid-template-rows: 80px 1fr;
+  row-gap: 100px;
   min-width: 360px;
 }
 
@@ -59,7 +60,6 @@ header {
 .testbox {
   min-width: 300px;
   grid-column: 2/3;
-  grid-row: 3/4;
   box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
 }
 
@@ -265,4 +265,14 @@ a .button:hover {
 #icon {
   margin-bottom: 25px;
   margin-right: 0;
+}
+
+@media (max-height: 700px) {
+  body {
+    row-gap: 0;
+  }
+
+  .testbox {
+    height: 560px;
+  }
 }
