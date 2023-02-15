@@ -20,19 +20,14 @@
 </head>
 
 <body data-home-page="Casa.html" data-home-page-title="Casa" class="u-body u-xl-mode" data-lang="es">
-    <header class="u-clearfix u-header u-header" id="sec-02a8">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"
-                    class="u-logo-image u-logo-image-1"></a>
-            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-                <div class="u-nav-container">
-                    <a href="#" data-target="modallogin"><i style="color: black" class="fa-solid fa-user"></i></a>
-                    <!--<button id = "abrir-modal"><img src="./src/images/usuario.png" height="35px" width="35px"></button>-->
-                </div>
-            </nav>
+    <header>
+        <div class="header">
+          <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
+          <div class="u-nav-container">
+            <a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>
+          </div>
         </div>
     </header>
-
     <section class="u-align-center u-clearfix u-image u-valign-top-lg u-valign-top-md u-valign-top-xl u-section-1"
         id="carousel_549e" data-image-width="1900" data-image-height="1086">
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -315,40 +310,62 @@
 
     <!--  Modales  -->
     <div id="modallogin" class="modal">
-        <div class="contenedor">
-            <div class="testbox">
+        <div class="contenedorModal">
                 <div class="headModal">
                     <h1>Inicio de sesion</h1>
-                    <span class="close" id="cerrar-modal">&times;</span>
+                    <span class="close">&times;</span>
                 </div>
-                <form class="formulario" action="./src/php/inicio_sesion.php" method="post">
+                <form class="formularioModal" action="./src/php/inicio_sesion.php" method="post">
                     <div class="tipoDeCuenta">
-                        <input type="radio" value="cliente" id="cliente" name="cuenta" checked />
-                        <label for="cliente" class="radio">Cliente</label>
-                        <input type="radio" value="proveedor" id="proveedor" name="cuenta" />
-                        <label for="proveedor" class="radio">Proveedor</label>
+                        <input type="radio" value="cliente" id="cliente" name="cuenta"/>
+                        <label class="bC" for="cliente"><i class="fa-regular fa-circle circleC"></i><i class="fa-solid fa-check checkC"></i> Cliente</label>
                     </div>
+                    <div class="tipoDeCuenta">
+                        <input type="radio" value="proveedor" id="proveedor" name="cuenta" />
+                        <label class="bP" for="proveedor"><i class="fa-regular fa-circle circleP"></i><i class="fa-solid fa-check checkP"></i>Proveedor</label>
+                    </div>
+                        
                     <div class="login">
-                        <div>
+                        <div class="M-1">
                             <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></i></label>
                             <input type="email" name="email" placeholder="Email"> 
                         </div>
-                        <div>
+                        <div class="M-2">
                             <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></i></label>
                             <input type="password" name="contraseña" placeholder="Contraseña">
                         </div>
-                        <div>
+                        <div class="M-3">
                             <input type="submit" value="Iniciar sesion" class="boton btnlog">
-                            <a href="./registro_cliente.html" class="button btnlog">ó registrate</a>
+                            <a href="./registro_cliente.html" class="button btnlog">Registrate</a>
                         </div>
-                        <div>
+                        <div class="M-4">
                              <a href="#" class="button">Olvidaste tu contraseña?</a>
                         </div>
                     </div>                    
                 </form>
-            </div>
-        </div>
+          </div>
     </div>
+
+    <script>
+        const cerrarLogin = document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector("#modallogin").style.display = "none"
+        })
+        const abrirLogin = document.querySelector(".fa-user").addEventListener("click", () => {
+            document.querySelector("#modallogin").style.display = "grid"
+        })
+        const checkC = document.querySelector("#cliente").addEventListener("click", () => {
+            document.querySelector(".checkC").style.display = "inline-block"
+            document.querySelector(".checkP").style.display = "none"
+            document.querySelector(".circleP").style.display = "inline-block"
+            document.querySelector(".circleC").style.display = "none"
+        })
+        const checkP = document.querySelector("#proveedor").addEventListener("click", () => {
+            document.querySelector(".checkP").style.display = "inline-block"
+            document.querySelector(".checkC").style.display = "none"
+            document.querySelector(".circleC").style.display = "inline-block"
+            document.querySelector(".circleP").style.display = "none"
+        })
+    </script>
 </body>
 
 </html>

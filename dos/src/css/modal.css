@@ -1,299 +1,228 @@
 #modallogin {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  display: none;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 2fr 3fr 2fr;
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 10s;
 }
 
-.contenedor {
+.contenedorModal {
+  min-width: 300px;
   grid-column: 2/3;
   grid-row: 2/3;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
 }
 
-#modallogin .testbox {
-    margin: 20px auto;
-    width: 343px; 
-    height: 420px; 
-    -webkit-border-radius: 8px/7px; 
-    -moz-border-radius: 8px/7px; 
-    border-radius: 8px/7px; 
-    background-color: #ebebeb; 
-    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    border: solid 1px #cbc9c9; 
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-  }
+.headModal {
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  border-bottom: 1px solid #e0dbdb;
+}
 
-  .headModal {
-    display: grid;
-    grid-template-columns: 1fr 10px;
-  }
-  
 #modallogin .tipoDeCuenta {
-    display: flex;
-    padding-top: 10px;
-    padding-left: 15px;
-    font-weight: light;
-  }
+  display: flex;
+  align-items: center;
+  font-weight: light;
+  border-bottom: 1px solid #cecaca;
+}
 
 #modallogin span {
   margin-left: -20px;
+  color: #6e6d6d;
 }
 
 .login {
   display: grid;
-  grid-template-rows: repeat(4, 70px);
+  grid-template-rows: 30px repeat(4, 1fr) 30px;
+  grid-template-columns: 100%;
+  grid-column: 1/-1;
 }
 
-.btnlog {
-  padding: 0;
-  width: 125px;
-  font-size: 1px;
+.M-1 {
+  grid-row: 2/3;
+}
+.M-2 {
+  grid-row: 3/4;
 }
 
-.formulario {
+.M-3 {
+  grid-row: 4/5;
+}
+
+.M-4 {
+  grid-row: 5/6;
+}
+
+.tipoDeCuenta input {
+  display: none;
+}
+
+.tipoDeCuenta label:hover {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(113, 142, 197, 0.19);
+  color: #3158cc;
+}
+
+.checkP, .checkC {
+  display: none;
+  margin-right: 5px;
+}
+
+.circleP, .circleC {
+  color: #3158cc;
+  margin-right: 5px;
+}
+
+.bC, .bP {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.fa-check {
+  color: #2d7a3a;
+}
+
+input[type=radio]:checked + label {
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+}
+
+.formularioModal {
   height: 350px;
+  min-width: 245px;
   display: grid;
   grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 30px;
 }
 
-#modallogin .foot {
-    height: 50px;
-    margin-top: -15px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-  
-#modallogin input[type=radio] {
-    visibility: hidden;
-  }
-  
-#modallogin form{
-    margin: 0 30px;
-  }
-  
- #modallogin label.radio {
-      cursor: pointer;
-    text-indent: 35px;
-    overflow: visible;
-    display: inline-block;
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-#modallogin label.radio:before {
-    background: #3a57af;
-    content:'';
-    position: absolute;
-    top:2px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-  }
-  
-#modallogin label.radio:after {
-      opacity: 0;
-      content: '';
-      position: absolute;
-      width: 0.5em;
-      height: 0.25em;
-      background: transparent;
-      top: 7.5px;
-      left: 4.5px;
-      border: 3px solid #ffffff;
-      border-top: none;
-      border-right: none;
-  
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-  }
-  
-#modallogin input[type=radio]:checked + label:after {
-      opacity: 1;
-  }
-  
-#modallogin hr{
-    /* color: #a9a9a9;
-    opacity: 0.3; */
-  }
-  
-#modallogin input[type=text],input[type=password], input[type=email]{
-    width: 200px; 
-    height: 39px; 
-    -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-    -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
-    border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-    background-color: #fff; 
-    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    border: solid 1px #cbc9c9;
-    margin-left: -5px;
-    margin-top: 13px; 
-    padding-left: 10px;
-  }
-  
-#modallogin input[type=password]{
-    margin-bottom: 25px;
-  }
-  
-#icon{
-  background-image: url('.\src\images\envelope-icon-14.png');
+#modallogin input[type=text],
+input[type=password],
+input[type=email] {
+  width: 200px;
+  height: 41px;
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  border: solid 1px #cbc9c9;
+  margin-left: -5px;
+}
+
+#icon {
   display: inline-block;
   width: 30px;
   background-color: #3a57af;
   padding: 8px 0px 8px 15px;
-  margin-left: 15px;
-  -webkit-border-radius: 4px 0px 0px 4px; 
-  -moz-border-radius: 4px 0px 0px 4px; 
   border-radius: 4px 0px 0px 4px;
   color: white;
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
   border: solid 0px #cbc9c9;
 }
-  
-#modallogin .gender {
-    margin-left: 30px;
-    margin-bottom: 30px;
-  }
-  
-#modallogin .accounttype{
-    margin-left: 8px;
-    margin-top: 20px;
-  }
-  
-#modallogin .boton{
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 8px 20px 0px;
-    display: inline-block;
-    text-decoration: none; 
-    -webkit-border-radius: 5px; 
-    -moz-border-radius: 5px; 
-    border-radius: 5px;
-    border: none;
-    background-color: #3a57af; 
-    -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
-    -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
-    box-shadow: 0 3px rgba(58,87,175,.75);
-    transition: all 0.1s linear 0s; 
-    margin-top: -5px;
-  }
- #modallogin .boton:hover{
-    top: 3px;
-    background-color:#2e458b;
-    -webkit-box-shadow: none; 
-    -moz-box-shadow: none; 
-    box-shadow: none;
-  }
-  
- #modallogin a.button {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 8px 20px 0px;
-    display: inline-block;
-    text-decoration: none; 
-    -webkit-border-radius: 5px; 
-    -moz-border-radius: 5px; 
-    border-radius: 5px; 
-    background-color: #3a57af; 
-    -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
-    -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
-    box-shadow: 0 3px rgba(58,87,175,.75);
-    transition: all 0.1s linear 0s; 
-    margin-top: -5px;
-  }
-  
- #modallogin a.button:hover {
-    top: 3px;
-    background-color:#2e458b;
-    -webkit-box-shadow: none; 
-    -moz-box-shadow: none; 
-    box-shadow: none;
-    
-  }
-  
- #modallogin .pais {
-    width: 210px;
-    height: 40px;
-    border: 1px solid #f3f3f3;
-    box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
-    border-radius: 5px;
-    margin-left: -5px;
-  }
 
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-  }
-  
+#modallogin .gender {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+#modallogin .accounttype {
+  margin-left: 8px;
+  margin-top: 20px;
+}
+
+#modallogin .boton {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #3a57af;
+  box-shadow: 0 3px rgba(58, 87, 175, .75);
+  transition: all 0.1s linear 0s;
+}
+
+#modallogin .boton:hover {
+  top: 3px;
+  background-color: #2e458b;
+  box-shadow: none;
+}
+
+#modallogin a.button {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 10px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #3a57af;
+  box-shadow: 0 3px rgba(58, 87, 175, .75);
+  transition: all 0.1s linear 0s;
+}
+
+#modallogin a.button:hover {
+  top: 3px;
+  background-color: #2e458b;
+  box-shadow: none;
+}
+
+#modallogin .pais {
+  width: 210px;
+  height: 40px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+  border-radius: 5px;
+  margin-left: -5px;
+}
 
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
 
 #modallogin h1 {
-    font-size: 32px;
-    font-weight: 300;
-    color: #4c4c4c;
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: 10px;
-  }
+  font-size: 32px;
+  font-weight: 300;
+  color: #4c4c4c;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
 
-#modallogin #icon{
-    background-image: url('.\src\images\envelope-icon-14.png');
-    display: inline-block;
-    width: 30px;
-    background-color: #3a57af;
-    padding: 8px 30px 8px 15px;
-    margin-left: 15px;
-    -webkit-border-radius: 4px 0px 0px 4px; 
-    -moz-border-radius: 4px 0px 0px 4px; 
-    border-radius: 4px 0px 0px 4px;
-    color: white;
-    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
-    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-    border: solid 0px #cbc9c9;
+#modallogin #icon {
+  display: inline-block;
+  width: 30px;
+  background-color: #3a57af;
+  padding: 8px 30px 8px 15px;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  border: solid 0px #cbc9c9;
 }
 
 #modallogin h1 {
   font-weight: bold;
+  font-size: 30px;
 }

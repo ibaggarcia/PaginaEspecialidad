@@ -169,6 +169,22 @@
   margin-top: 20px;
 }
 
+.header { 
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  padding: 20px 20px;
+}
+
+.u-nav-container {
+  display: grid;
+  place-items: center;
+}
+
+.fa-user:hover {
+  cursor: pointer;
+}
+
 .u-section-1 .u-text-10 {
   width: 237px;
   margin: 30px auto 60px;
