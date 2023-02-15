@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  width: 100vw;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 10px 1fr 10px;
@@ -225,7 +226,7 @@ input[type=password]{
   box-shadow: none;
 }
 
-a.button {
+a .button {
   font-size: 14px;
   font-weight: bold;
   color: white;
@@ -240,7 +241,7 @@ a.button {
   margin-top: -5px;
 }
 
-a.button:hover {
+a .button:hover {
   top: 3px;
   background-color:#2e458b;
   box-shadow: none;
@@ -265,4 +266,3 @@ a.button:hover {
   margin-bottom: 25px;
   margin-right: 0;
 }
-
