@@ -23,7 +23,7 @@ else
 
 $rs = mysqli_query($conn, $registro);
 if ($rs) {
-    header("location: http://$host/PaginaEspecialidad/dos/index.html");
+    header("location: http://$host/PaginaEspecialidad/index.html");
 } else {
     echo "No se pudo registrar";
 }

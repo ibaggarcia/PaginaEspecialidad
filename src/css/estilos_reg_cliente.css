@@ -110,7 +110,7 @@ html{
 
 .foot {
   height: 50px;
-  margin-top: -15px;
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -257,9 +257,18 @@ a .button:hover {
   margin-left: -5px;
 }
 
-#phone {
+.pais_tel{
+  width: 50px;
+  height: 40px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+  border-radius: 5px;
   margin-left: -5px;
-  width: 210px;
+}
+
+#telf {
+  margin-left: -5px;
+  width: 150px;
 }
 
 #icon {

@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="./src/css/estilos_reg_cliente.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://kit.fontawesome.com/ca21a15e6d.js" crossorigin="anonymous"></script>
@@ -44,7 +43,176 @@
       <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
       <input type="password" name="contraseña" id="name" placeholder="Contraseña" required />
       <label id="icon" for="telefono"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
-      <input id="phone" type="tel" class="phone" name="telefono" required />
+      <select class="pais_tel" name="pais" id="pais_tel">
+        <option></option>
+        <option value="+93">Afganistán</option>
+        <option value="+355">Albania</option>
+        <option value="+49">Alemania</option>
+        <option value="+376">Andorra</option>
+        <option value="+244">Angola</option>
+        <option value="+1">Antigua y Barbuda</option>
+        <option value="+213">Argelia</option>
+        <option value="+54">Argentina</option>
+        <option value="+374">Armenia</option>
+        <option value="+61">Australia</option>
+        <option value="+43">Austria</option>
+        <option value="+994">Azerbaiyán</option>
+        <option value="+1">Bahamas</option>
+        <option value="+880">Bangladés</option>
+        <option value="+1">Barbados</option>
+        <option value="+973">Baréin</option>
+        <option value="+32">Bélgica</option>
+        <option value="+501">Belice</option>
+        <option value="+229">Benín</option>
+        <option value="+591">Bolivia</option>
+        <option value="+387">Bosnia y Herzegovina</option>
+        <option value="+55">Brasil</option>
+        <option value="+673">Brunéi</option>
+        <option value="+359">Bulgaria</option>
+        <option value="+226">Burkina Faso</option>
+        <option value="+257">Burundi</option> 
+        <option value="+238">Cabo Verde</option>
+        <option value="+855">Camboya</option>
+        <option value="+237">Camerún</option>
+        <option value="+1">Canadá</option>
+        <option value="+974">Catar</option>
+        <option value="+56">Chile</option>
+        <option value="+86">China</option>
+        <option value="+57">Colombia</option>
+        <option value="+82">Corea del Sur</option>
+        <option value="+506">Costa Rica</option>
+        <option value="+385">Croacia</option>
+        <option value="+53">Cuba</option>
+        <option value="+45">Dinamarca</option>
+        <option value="+1">Dominica</option>
+        <option value="+593">Ecuador</option>
+        <option value="+20">Egipto</option>
+        <option value="+503">El Salvador</option>
+        <option value="+971">Emiratos Árabes Unidos</option>
+        <option value="+291">Eritrea</option>
+        <option value="+421">Eslovaquia</option>
+        <option value="+386">Eslovenia</option>
+        <option value="+34">España</option>
+        <option value="+1">Estados Unidos</option>
+        <option value="+372">Estonia</option>
+        <option value="+251">Etiopía</option>
+        <option value="+63">Filipinas</option>
+        <option value="+358">Finlandia</option>
+        <option value="+679">Fiyi</option>
+        <option value="+33">Francia</option>
+        <option value="+241">Gabón</option>
+        <option value="+220">Gambia</option>
+        <option value="+995">Georgia</option>
+        <option value="+233">Ghana</option>
+        <option value="+1">Granada</option>
+        <option value="+30">Grecia</option>
+        <option value="+502">Guatemala</option>
+        <option value="+509">Haití</option>
+        <option value="+504">Honduras</option>
+        <option value="+36">Hungría</option>
+        <option value="+91">India</option>
+        <option value="+62">Indonesia</option>
+        <option value="+964">Irak</option>
+        <option value="+98">Irán</option>
+        <option value="+353">Irlanda</option>
+        <option value="+354">Islandia</option>
+        <option value="+972">Israel</option>
+        <option value="+39">Italia</option>
+        <option value="+1">Jamaica</option>
+        <option value="+81">Japón</option>
+        <option value="+962">Jordania</option>
+        <option value="+7">Kazajistán</option>
+        <option value="+254">Kenia</option>
+        <option value="+996">Kirguistán</option>
+        <option value="+965">Kuwait</option>
+        <option value="+856">Laos</option>
+        <option value="+266">Lesoto</option>
+        <option value="+371">Letonia</option>
+        <option value="+961">Líbano</option>
+        <option value="+231">Liberia</option>
+        <option value="+218">Libia</option>
+        <option value="+423">Liechtenstein</option>
+        <option value="+370">Lituania</option>
+        <option value="+352">Luxemburgo</option>
+        <option value="+389">Macedonia del Norte</option>
+        <option value="+261">Madagascar</option>
+        <option value="+60">Malasia</option>
+        <option value="+265">Malaui</option>
+        <option value="+960">Maldivas</option>
+        <option value="+223">Malí</option>
+        <option value="+356">Malta</option>
+        <option value="+212">Marruecos</option>
+        <option value="+230">Mauricio</option>
+        <option value="+222">Mauritania</option>
+        <option value="+52">México</option>
+        <option value="+691">Micronesia</option>
+        <option value="+373">Moldavia</option>
+        <option value="+377">Mónaco</option>
+        <option value="+976">Mongolia</option>
+        <option value="+382">Montenegro</option>
+        <option value="+264">Namibia</option>
+        <option value="+977">Nepal</option>
+        <option value="+505">Nicaragua</option>
+        <option value="+227">Níger</option>
+        <option value="+234">Nigeria</option>
+        <option value="+47">Noruega</option>
+        <option value="+64">Nueva Zelanda</option>
+        <option value="+968">Omán</option>
+        <option value="+31">Países Bajos</option>
+        <option value="+92">Pakistán</option>
+        <option value="+680">Palaos</option>
+        <option value="+507">Panamá</option>
+        <option value="+675">Papúa Nueva Guinea</option>
+        <option value="+595">Paraguay</option>
+        <option value="+51">Perú</option>
+        <option value="+48">Polonia</option>
+        <option value="+351">Portugal</option>
+        <option value="+44">Reino Unido</option>
+        <option value="+420">República Checa</option>
+        <option value="+242">República del Congo</option>
+        <option value="+243">República Democrática del Congo</option>
+        <option value="+1">República Dominicana</option>
+        <option value="+27">República Sudafricana</option>
+        <option value="+250">Ruanda</option>
+        <option value="+40">Rumanía</option>
+        <option value="+7">Rusia</option>
+        <option value="+685">Samoa</option>
+        <option value="+221">Senegal</option>
+        <option value="+381">Serbia</option>
+        <option value="+248">Seychelles</option>
+        <option value="+232">Sierra Leona</option>
+        <option value="+65">Singapur</option>
+        <option value="+963">Siria</option>
+        <option value="+252">Somalia</option>
+        <option value="+94">Sri Lanka</option>
+        <option value="+268">Suazilandia</option>
+        <option value="+249">Sudán</option>
+        <option value="+211">Sudán del Sur</option>
+        <option value="+46">Suecia</option>
+        <option value="+41">Suiza</option>
+        <option value="+594">Surinam</option>
+        <option value="+66">Tailandia</option>
+        <option value="+255">Tanzania</option>
+        <option value="+992">Tayikistán</option>
+        <option value="+228">Togo</option>
+        <option value="+676">Tonga</option>
+        <option value="+1">Trinidad y Tobago</option>
+        <option value="+216">Túnez</option>
+        <option value="+993">Turkmenistán</option>
+        <option value="+90">Turquía</option>
+        <option value="+668">Tuvalu</option>
+        <option value="+380">Ucrania</option>
+        <option value="+256">Uganda</option>
+        <option value="+598">Uruguay</option>
+        <option value="+998">Uzbekistán</option>
+        <option value="+678">Vanuatu</option>
+        <option value="+58">Venezuela</option>
+        <option value="+84">Vietnam</option>
+        <option value="+967">Yemen</option>
+        <option value="+260">Zambia</option>
+        <option value="+263">Zimbabue</option>
+      </select>
+      <input type="text" id="telf" name="telefono" placeholder="Telefono" disabled="disabled" required/>
       <label id="icon" for="pais"><i class="fa-brands fa-font-awesome"></i></label>
       <select class="pais" name="pais">
         <option value="NA" selected>Selecciona una opcion</option>
@@ -243,12 +411,6 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbabue">Zimbabue</option>
       </select> <br>
-      <div class="gender">
-        <input type="radio" value="hombre" id="hombre" name="gender" checked />
-        <label for="hombre" class="radio">Hombre</label>
-        <input type="radio" value="mujer" id="mujer" name="gender" />
-        <label for="mujer" class="radio">Mujer</label>
-      </div>
       <div class="foot">
         <div>
           <p style="font-weight: bold;">Haz click aqui para checar <a href="#">Terminos y condiciones</a></p>
@@ -256,15 +418,29 @@
         <input type="submit" value="Registrarse" class="boton">
       </div>
     </form>
-    <div class="alert alert-info" style="display: none;"></div>
   </div>
 </body>
 <script>
-  const phoneInputField = document.querySelector("#phone");
-  const phoneInput = window.intlTelInput(phoneInputField, {
-    utilsScript:
-      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-  });
+  var pais = document.getElementById('pais_tel');
+  var telf = document.getElementById('telf');
+  
+  pais.onchange = function(e) {
+      telf.value = this.value;
+      if((this.value).trim() != '') {
+          telf.disabled = false;
+      } else {
+          telf.disabled = true
+      }
+  }
+  
+  telf.onkeyup = function(e) {
+      var nums_v = this.value.match(/\d+/g);
+      if (nums_v != null) {
+          this.value = '+'+((nums_v).toString().replace(/\,/, ''));
+      } else { 
+          this.value = pais.value;
+      }
+  }
 </script>
 
 </html>

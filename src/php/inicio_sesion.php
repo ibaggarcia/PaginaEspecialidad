@@ -18,9 +18,9 @@ else
 $query_result = mysqli_query($conn, $consulta);
 $row = mysqli_fetch_array($query_result);
 if ($row != "") {
-    header("location: http://$host/PaginaEspecialidad/dos/sesion.html");
+    header("location: http://$host/PaginaEspecialidad/sesion.html");
 }
 else {
-    header("location: http://$host/PaginaEspecialidad/dos/inicio_sesion.html");
+    header("location: http://$host/PaginaEspecialidad/inicio_sesion.html");
 }
 ?>
