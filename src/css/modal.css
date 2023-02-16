@@ -1,0 +1,228 @@
+#modallogin {
+  display: none;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 2fr 3fr 2fr;
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 10s;
+}
+
+.contenedorModal {
+  min-width: 300px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.headModal {
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  border-bottom: 1px solid #e0dbdb;
+}
+
+#modallogin .tipoDeCuenta {
+  display: flex;
+  align-items: center;
+  font-weight: light;
+  border-bottom: 1px solid #cecaca;
+}
+
+#modallogin span {
+  margin-left: -20px;
+  color: #6e6d6d;
+}
+
+.login {
+  display: grid;
+  grid-template-rows: 30px repeat(4, 1fr) 30px;
+  grid-template-columns: 100%;
+  grid-column: 1/-1;
+}
+
+.M-1 {
+  grid-row: 2/3;
+}
+.M-2 {
+  grid-row: 3/4;
+}
+
+.M-3 {
+  grid-row: 4/5;
+}
+
+.M-4 {
+  grid-row: 5/6;
+}
+
+.tipoDeCuenta input {
+  display: none;
+}
+
+.tipoDeCuenta label:hover {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(113, 142, 197, 0.19);
+  color: #3158cc;
+}
+
+.checkP, .checkC {
+  display: none;
+  margin-right: 5px;
+}
+
+.circleP, .circleC {
+  color: #3158cc;
+  margin-right: 5px;
+}
+
+.bC, .bP {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.fa-check {
+  color: #2d7a3a;
+}
+
+input[type=radio]:checked + label {
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+}
+
+.formularioModal {
+  height: 350px;
+  min-width: 245px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 30px;
+}
+
+#modallogin input[type=text],
+input[type=password],
+input[type=email] {
+  width: 200px;
+  height: 41px;
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  border: solid 1px #cbc9c9;
+  margin-left: -5px;
+}
+
+#icon {
+  display: inline-block;
+  width: 30px;
+  background-color: #3a57af;
+  padding: 8px 0px 8px 15px;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  border: solid 0px #cbc9c9;
+}
+
+#modallogin .gender {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+#modallogin .accounttype {
+  margin-left: 8px;
+  margin-top: 20px;
+}
+
+#modallogin .boton {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #3a57af;
+  box-shadow: 0 3px rgba(58, 87, 175, .75);
+  transition: all 0.1s linear 0s;
+}
+
+#modallogin .boton:hover {
+  top: 3px;
+  background-color: #2e458b;
+  box-shadow: none;
+}
+
+#modallogin a.button {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 10px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #3a57af;
+  box-shadow: 0 3px rgba(58, 87, 175, .75);
+  transition: all 0.1s linear 0s;
+}
+
+#modallogin a.button:hover {
+  top: 3px;
+  background-color: #2e458b;
+  box-shadow: none;
+}
+
+#modallogin .pais {
+  width: 210px;
+  height: 40px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+  border-radius: 5px;
+  margin-left: -5px;
+}
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+
+#modallogin h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #4c4c4c;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+#modallogin #icon {
+  display: inline-block;
+  width: 30px;
+  background-color: #3a57af;
+  padding: 8px 30px 8px 15px;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  border: solid 0px #cbc9c9;
+}
+
+#modallogin h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
