@@ -1,6 +1,3 @@
-
-
-
 document.querySelector('#cerrar-modal').addEventListener('click', function() {
   document.querySelector('#modallogin').style.display = 'none';
 });

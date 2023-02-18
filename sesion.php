@@ -1,3 +1,6 @@
+<?php
+session_start();
+$host = $_SERVER['HTTP_HOST'];?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Iniciaste sesion</h1>
+    <h1 style="display:inline">Iniciaste sesion</h1>
+    <h6 style="display:inline"><?php if (isset($_SESSION['Usuario'])){
+        echo $_SESSION['Usuario'];
+    } ?></h6>
 </body>
 </html>

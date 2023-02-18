@@ -1,3 +1,6 @@
+<?php
+session_start();
+$host = $_SERVER['HTTP_HOST'];?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,10 +25,10 @@
 <body data-home-page="Casa.html" data-home-page-title="Casa" class="u-body u-xl-mode" data-lang="es">
     <header>
         <div class="header">
-          <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
-          <div class="u-nav-container">
-            <a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>
-          </div>
+            <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
+            <div class="u-nav-container">
+                <a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>
+            </div>
         </div>
     </header>
     <section class="u-align-center u-clearfix u-image u-valign-top-lg u-valign-top-md u-valign-top-xl u-section-1"
@@ -41,7 +44,7 @@
                                 Atiende tus necesidades desde tu casa</h1>
                             <p class="u-text u-text-3">Aqui encontraras una variedad de especialistas relacionados a la
                                 salud y el desarrollo</p>
-                            <a href="./registro_cliente.html"
+                            <a href="./registro_cliente.php"
                                 class="u-btn u-button-style u-custom-font u-font-roboto-condensed u-text-body-alt-color u-btn-1">Registrate</a>
                         </div>
                     </div>
@@ -328,24 +331,23 @@
                     <div class="login">
                         <div class="M-1">
                             <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></i></label>
-                            <input type="email" name="email" placeholder="Email"> 
+                            <input type="email" name="email" placeholder="Email" required> 
                         </div>
                         <div class="M-2">
                             <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></i></label>
-                            <input type="password" name="contraseña" placeholder="Contraseña">
+                            <input type="password" name="contraseña" placeholder="Contraseña" required>
                         </div>
                         <div class="M-3">
                             <input type="submit" value="Iniciar sesión" class="boton btnlog">
-                            <a href="./registro_cliente.html" class="button btnlog">Registrate</a>
+                            <a href="./registro_cliente.php" class="button btnlog">Registrate</a>
                         </div>
                         <div class="M-4">
-                             <a href="#" class="button">Olvidaste tu contraseña?</a>
+                            <a href="#" class="button btnlog">Olvidaste tu contraseña?</a>
                         </div>
                     </div>                    
                 </form>
-          </div>
+        </div>
     </div>
-
     <script>
         const cerrarLogin = document.querySelector(".close").addEventListener("click", () => {
             document.querySelector("#modallogin").style.display = "none"
