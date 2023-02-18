@@ -85,7 +85,7 @@ html{
 .testbox {
   margin: 20px auto;
   width: 343px; 
-  height: 600px; 
+  height: 650px; 
   border-radius: 8px/7px; 
   background-color: #ebebeb; 
   box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
@@ -195,11 +195,6 @@ input[type=password]{
   border: solid 0px #cbc9c9;
 }
 
-.gender {
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-
 .accounttype{
   margin-left: 8px;
   margin-top: 20px;
@@ -276,6 +271,13 @@ a .button:hover {
   margin-right: 0;
 }
 
+<<<<<<< HEAD:dos/src/css/estilos_reg_cliente.css
+body {
+  heigh:665px;
+  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+  background-size: 10rem;
+  
+=======
 @media (max-height: 700px) {
   body {
     row-gap: 0;
@@ -284,4 +286,5 @@ a .button:hover {
   .testbox {
     height: 560px;
   }
+>>>>>>> 9a0702440b918486f7e9e724c9b48d86e4c1fe7e:src/css/estilos_reg_cliente.css
 }

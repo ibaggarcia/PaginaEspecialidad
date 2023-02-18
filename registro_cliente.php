@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,22 +18,23 @@
 <body>
   <header>
     <div class="header">
-      <a href="./index.html" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"
+      <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"
           class="u-logo-image u-logo-image-1"></a>
       <div class="u-nav-container">
         <a class="user" href="./inicio_sesion.html"><i style="color: black" class="fa-solid fa-user"></i></a>
       </div>
     </div>
   </header>
+
   <div class="testbox">
     <h1 style="font-weight: bold;">Registro</h1>
 
     <form class="Registro" action="./src/php/registro.php" method="post">
       <hr>
       <div class="tipoDeCuenta">
-        <input type="radio" value="cliente" id="cliente" name="cuenta" checked />
+        <input type="radio" value="cliente" id="cliente" name="cuenta" checked/>
         <label for="cliente" class="radio">Cliente</label>
-        <input type="radio" value="proveedor" id="proveedor" name="cuenta" />
+        <input type="radio" value="proveedor" id="proveedor" name="cuenta"/>
         <label for="proveedor" class="radio">Proveedor</label>
       </div>
       <hr>
@@ -41,9 +43,12 @@
       <label id="icon" for="nombre"><i class="usuario-icon"><i class="fa-solid fa-user"></i></label>
       <input type="text" name="nombre" id="name" placeholder="Nombre" required />
       <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
-      <input type="password" name="contraseña" id="name" placeholder="Contraseña" required />
+      <input type="password" name="contraseña" id="name" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+              title="La contraseña debe contener al menos una letra mayuscula, una minuscula, un dígito y minimo 8 caracteres"  required />
+      <label id="icon" for="confirm-contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
+      <input type="password" name="confirm-contraseña" id="name" placeholder="Confirmar contraseña" required />
       <label id="icon" for="telefono"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
-      <select class="pais_tel" name="pais" id="pais_tel">
+      <select class="pais_tel" name="pais" id="pais_tel" required>
         <option></option>
         <option value="+93">Afganistán</option>
         <option value="+355">Albania</option>
@@ -410,7 +415,8 @@
         <option value="Yibuti">Yibuti</option>
         <option value="Zambia">Zambia</option>
         <option value="Zimbabue">Zimbabue</option>
-      </select> <br>
+      </select>
+      <br>
       <div class="foot">
         <div>
           <p style="font-weight: bold;">Haz click aqui para checar <a href="#">Terminos y condiciones</a></p>

@@ -1,4 +1,3 @@
-
 document.querySelector('#cerrar-modal').addEventListener('click', function() {
   document.querySelector('#modalregistro').style.display = 'none';
 });
@@ -12,5 +11,5 @@ $('a[data-target="modalregistro"]').on('click', function() {
 });
 
 $('#close-modal').on('click', function() {
-  $('#modalregistro').hide();
+  $('#mi-modal').hide();
 });
