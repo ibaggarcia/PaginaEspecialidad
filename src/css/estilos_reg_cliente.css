@@ -271,6 +271,13 @@ a .button:hover {
   margin-right: 0;
 }
 
+<<<<<<< HEAD:dos/src/css/estilos_reg_cliente.css
+body {
+  heigh:665px;
+  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+  background-size: 10rem;
+  
+=======
 @media (max-height: 700px) {
   body {
     row-gap: 0;
@@ -279,4 +286,5 @@ a .button:hover {
   .testbox {
     height: 560px;
   }
+>>>>>>> 9a0702440b918486f7e9e724c9b48d86e4c1fe7e:src/css/estilos_reg_cliente.css
 }
