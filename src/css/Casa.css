@@ -177,7 +177,7 @@
 }
 
 .u-nav-container {
-  display: grid;
+  display: flex;
   place-items: center;
 }
 

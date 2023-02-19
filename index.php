@@ -27,7 +27,14 @@ $host = $_SERVER['HTTP_HOST'];?>
         <div class="header">
             <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
             <div class="u-nav-container">
-                <a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>
+            <?php if (isset($_SESSION['Usuario'])){
+                echo $_SESSION['Usuario'];
+                echo "<a href='./src/php/logout.php'>Cerrar Sesión</a>";
+            }else{
+                echo "<a data-target='modallogin' class='user fa-login'>Acceder</a>";
+                echo "<a href='./registro_cliente.php'>Registrarse</a>";
+            }?>
+                <!--<a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>-->
             </div>
         </div>
     </header>
@@ -342,7 +349,7 @@ $host = $_SERVER['HTTP_HOST'];?>
                             <a href="./registro_cliente.php" class="button btnlog">Registrate</a>
                         </div>
                         <div class="M-4">
-                            <a href="#" class="button btnlog">Olvidaste tu contraseña?</a>
+                            <a href="./recuperacion.html" class="button btnlog">Olvidaste tu contraseña?</a>
                         </div>
                     </div>                    
                 </form>
@@ -352,7 +359,7 @@ $host = $_SERVER['HTTP_HOST'];?>
         const cerrarLogin = document.querySelector(".close").addEventListener("click", () => {
             document.querySelector("#modallogin").style.display = "none"
         })
-        const abrirLogin = document.querySelector(".fa-user").addEventListener("click", () => {
+        const abrirLogin = document.querySelector(".fa-login").addEventListener("click", () => {
             document.querySelector("#modallogin").style.display = "grid"
         })
         const checkC = document.querySelector("#cliente").addEventListener("click", () => {
