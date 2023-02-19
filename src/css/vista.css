@@ -39964,6 +39964,92 @@ blockquote
 {
 border-color: #478ac9;
 }
+
+.u-palette-7-base
+{
+  color: #ffffff;
+  background-color: #2cccc4;
+}
+
+.u-palette-8-base
+{
+  color: #ffffff;
+  background-color: #f1c50e;
+}
+
+.u-palette-9-base
+{
+  color: #ffffff;
+  background-color: #F1540E;
+}
+
+.u-palette-10-base
+{
+  color: #ffffff;
+  background-color: #0EABF1;
+}
+
+.u-palette-11-base
+{
+  color: #ffffff;
+  background-color: #3AF10E;
+}
+
+.u-text-palette-9-base,
+li.active > a.u-button-style.u-text-palette-9-base,
+li.active > a.u-button-style.u-text-palette-9-base[class*="u-border-"],
+a.u-button-style.u-text-palette-9-base,
+a.u-button-style.u-text-palette-9-base[class*="u-border-"] {
+  color: #F1540E !important;
+}
+a.u-button-style.u-text-palette-9-base:hover,
+a.u-button-style.u-text-palette-9-base[class*="u-border-"]:hover,
+a.u-button-style.u-text-palette-9-base:focus,
+a.u-button-style.u-text-palette-9-base[class*="u-border-"]:focus,
+a.u-button-style.u-button-style.u-text-palette-9-base:active,
+a.u-button-style.u-button-style.u-text-palette-9-base[class*="u-border-"]:active,
+a.u-button-style.u-button-style.u-text-palette-9-base.active,
+a.u-button-style.u-button-style.u-text-palette-9-base[class*="u-border-"].active {
+  color: #F1540E !important;
+}
+
+
+.u-text-palette-10-base,
+li.active > a.u-button-style.u-text-palette-10-base,
+li.active > a.u-button-style.u-text-palette-10-base[class*="u-border-"],
+a.u-button-style.u-text-palette-10-base,
+a.u-button-style.u-text-palette-10-base[class*="u-border-"] {
+  color: #0EABF1 !important;
+}
+a.u-button-style.u-text-palette-10-base:hover,
+a.u-button-style.u-text-palette-10-base[class*="u-border-"]:hover,
+a.u-button-style.u-text-palette-10-base:focus,
+a.u-button-style.u-text-palette-10-base[class*="u-border-"]:focus,
+a.u-button-style.u-button-style.u-text-palette-10-base:active,
+a.u-button-style.u-button-style.u-text-palette-10-base[class*="u-border-"]:active,
+a.u-button-style.u-button-style.u-text-palette-10-base.active,
+a.u-button-style.u-button-style.u-text-palette-10-base[class*="u-border-"].active {
+  color: #0EABF1 !important;
+}
+
+.u-text-palette-11-base,
+li.active > a.u-button-style.u-text-palette-11-base,
+li.active > a.u-button-style.u-text-palette-11-base[class*="u-border-"],
+a.u-button-style.u-text-palette-11-base,
+a.u-button-style.u-text-palette-11-base[class*="u-border-"] {
+  color: #3AF10E !important;
+}
+a.u-button-style.u-text-palette-11-base:hover,
+a.u-button-style.u-text-palette-11-base[class*="u-border-"]:hover,
+a.u-button-style.u-text-palette-11-base:focus,
+a.u-button-style.u-text-palette-11-base[class*="u-border-"]:focus,
+a.u-button-style.u-button-style.u-text-palette-11-base:active,
+a.u-button-style.u-button-style.u-text-palette-11-base[class*="u-border-"]:active,
+a.u-button-style.u-button-style.u-text-palette-11-base.active,
+a.u-button-style.u-button-style.u-text-palette-11-base[class*="u-border-"].active {
+  color: #3AF10E !important;
+}
+
 /** color-rules **/
 
 /** alt-color-rules **/

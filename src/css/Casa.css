@@ -167,18 +167,43 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
+  font-weight: 700;
 }
 
 .header { 
-  height: 80px;
-  display: grid;
-  grid-template-columns: 1fr 70px;
-  padding: 20px 20px;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+
+.column1{
+  flex-grow: 1.2;
+}
+
+.column2{
+  flex-grow: 1;
+}
+
+.column3{
+  flex-grow: 1;
+}
+
+.bottonA {
+  display: inline-block;
+  background-color: #3b93f1;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .u-nav-container {
   display: flex;
-  place-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .fa-user:hover {
