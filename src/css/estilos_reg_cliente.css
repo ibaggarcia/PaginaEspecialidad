@@ -271,6 +271,14 @@ a .button:hover {
   margin-right: 0;
 }
 
+<<<<<<< HEAD
+body {
+  height:665px;
+  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
+  background-size: 10rem;
+  
+=======
+>>>>>>> ad843ad9e3f53e0349cc9795d2d9200e82671c1f
 @media (max-height: 700px) {
   body {
     row-gap: 0;
