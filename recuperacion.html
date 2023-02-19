@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/recuperacion.css">
+    <script src="https://kit.fontawesome.com/ca21a15e6d.js" crossorigin="anonymous"></script>
+    <title>Recuperar contraseña</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+                <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"
+                class="u-logo-image u-logo-image-1"></a>
+            <div class="u-nav-container">
+                <a class="user" href="./inicio_sesion.html"><i style="color: black" class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="testbox">
+        <h1 style="font-weight: bold;">Recuperar Contraseña</h1>
+    
+        <form class="Recuperar" action="./src/php/registro.php" method="post">
+            <hr>
+            <div class="tipoDeCuenta">
+                <input type="radio" value="cliente" id="cliente" name="cuenta" checked/>
+                <label for="cliente" class="radio">Cliente</label>
+                <input type="radio" value="proveedor" id="proveedor" name="cuenta"/>
+                <label for="proveedor" class="radio">Proveedor</label>
+            </div>
+            <hr>
+            <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></label>
+            <input type="email" name="email" id="name" placeholder="Email" required />
+            <div class="foot">
+                <input type="submit" value="Recuperar Contraseña" class="boton">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
