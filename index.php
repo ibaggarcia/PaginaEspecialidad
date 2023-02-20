@@ -1,6 +1,3 @@
-<?php
-session_start();
-$host = $_SERVER['HTTP_HOST'];?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +5,7 @@ $host = $_SERVER['HTTP_HOST'];?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Inicio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/ca21a15e6d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/css/modal.css" media="screen">
     <link rel="stylesheet" href="./src/css/vista.css" media="screen">
@@ -23,17 +21,17 @@ $host = $_SERVER['HTTP_HOST'];?>
 </head>
 
 <body data-home-page="Casa.html" data-home-page-title="Casa" class="u-body u-xl-mode" data-lang="es">
-    <header>
+ <header>
         <div class="header">
-            <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
+          <a href="./index.html" class="u-image u-logo u-image-1 column1"><img src="./src/images/default-logo.png" class="u-logo-image u-logo-image-1"></a>
             <div class="u-nav-container">
-            <?php if (isset($_SESSION['Usuario'])){
-                echo $_SESSION['Usuario'];
-                echo "<a href='./src/php/logout.php'>Cerrar Sesión</a>";
-            }else{
-                echo "<a data-target='modallogin' class='user fa-login'>Acceder</a>";
-                echo "<a href='./registro_cliente.php'>Registrarse</a>";
-            }?>
+                <?php if (isset($_SESSION['Usuario'])){
+                    echo $_SESSION['Usuario'];
+                    echo "<a class='user desplegar-menu' href='#' data-target='modalusuario'><i style='color: black' class='fa-solid fa-user'></i></a>";
+                }else{
+                    echo "<a href='#' data-target='modallogin' class='user bottonA'>Acceder</a>&nbsp;";
+                    echo "<a href='./registro_cliente.php' class=' bottonA'>Registrarse</a>";
+                }?>
                 <!--<a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>-->
             </div>
         </div>
@@ -67,8 +65,8 @@ $host = $_SERVER['HTTP_HOST'];?>
                 <div class="u-layout-row">
                     <div class="u-container-style u-layout-cell u-left-cell u-palette-1-base u-size-20 u-layout-cell-3">
                         <div class="u-container-layout u-valign-top u-container-layout-3">
-                            <span class="u-icon u-icon-circle u-text-palette-1-base u-white u-icon-1">
-                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
+                            <!--<span class="u-icon u-icon-circle u-text-palette-1-base u-white u-icon-1">
+                                <svg class="" preserveAspectRatio="xMidYMin slice"
                                     viewBox="0 0 512.002 512.002" style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bc6e"></use>
                                 </svg>
@@ -115,8 +113,8 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         </path>
                                     </g>
                                 </svg>
-                            </span>
-                            <h2 class="u-align-center u-custom-font u-font-roboto-condensed u-text u-text-4">Psicologo
+                            </span> -->
+                            <h2 class="u-align-center u-custom-font u-font-roboto-condensed u-text u-text-4"><i class="fa-sharp fa-solid fa-brain"></i>&nbsp;&nbsp;Psicologo
                             </h2>
                             <p class="u-align-center u-text u-text-5">Psicología clínica, cognitiva, conductual, del
                                 desarrollo, social, del trabajo, animal, diferencial, experimental.</p>
@@ -125,9 +123,9 @@ $host = $_SERVER['HTTP_HOST'];?>
                         </div>
                     </div>
                     <div
-                        class="u-align-center u-container-style u-layout-cell u-palette-4-base u-size-20 u-layout-cell-4">
+                        class="u-align-center u-container-style u-layout-cell u-palette-4-base u-palette-7-base u-size-20 u-layout-cell-4">
                         <div class="u-container-layout u-valign-top u-container-layout-4">
-                            <span class="u-icon u-icon-circle u-text-palette-4-base u-white u-icon-2">
+                            <!--<span class="u-icon u-icon-circle u-text-palette-4-base u-white u-icon-2">
                                 <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
                                     viewBox="0 0 511.988 511.988" style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e4e7"></use>
@@ -151,8 +149,8 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         </path>
                                     </g>
                                 </svg>
-                            </span>
-                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-6">Psiquiatra</h2>
+                            </span>-->
+                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-6"><i class="fa-solid fa-comment-medical"></i>&nbsp;&nbsp;Psiquiatra</h2>
                             <p class="u-text u-text-7">Profesionales de la medicina que se especializa en la prevención,
                                 el diagnóstico y el tratamiento de trastornos mentales, emocionales y del
                                 comportamiento.</p>
@@ -161,9 +159,9 @@ $host = $_SERVER['HTTP_HOST'];?>
                         </div>
                     </div>
                     <div
-                        class="u-align-center u-container-style u-layout-cell u-palette-3-base u-right-cell u-size-20 u-layout-cell-5">
+                        class="u-align-center u-container-style u-layout-cell u-palette-3-base u-palette-8-base u-right-cell u-size-20 u-layout-cell-5">
                         <div class="u-container-layout u-valign-top u-container-layout-5">
-                            <span class="u-icon u-icon-circle u-text-palette-3-base u-white u-icon-3">
+                            <!--<span class="u-icon u-icon-circle u-text-palette-3-base u-white u-icon-3">
                                 <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"
                                     style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-34e4"></use>
@@ -173,8 +171,8 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         d="m262.761 172h-159.534c-28.305 0-55.234 12.216-73.884 33.516-18.661 21.313-27.217 49.644-23.475 77.729l17.965 134.802c3.467 26.011 16.244 49.856 35.979 67.143 19.737 17.289 45.054 26.81 71.287 26.81h103.789c26.233 0 51.551-9.521 71.288-26.81 19.734-17.287 32.512-41.132 35.978-67.143l17.966-134.803c3.742-28.084-4.814-56.415-23.476-77.728-18.649-21.3-45.579-33.516-73.883-33.516zm57.709 105.96-17.966 134.803c-4.5 33.77-33.568 59.236-67.616 59.236h-103.789c-34.048 0-63.116-25.466-67.616-59.237l-17.965-134.801c-2.22-16.656 2.854-33.457 13.919-46.095 11.055-12.625 27.016-19.866 43.79-19.866h159.533c16.774 0 32.735 7.241 43.79 19.866 11.066 12.638 16.139 29.439 13.92 46.094zm116.732-203.97c-3.956 4.631-9.569 7.01-15.218 7.011-4.595 0-9.212-1.575-12.979-4.793l-22.92-19.577c-12.479-10.659-27.657-16.395-43.957-16.623l-79.887 8.669c-14.208 1.541-28.655 2.323-42.942 2.323h-15.305v41h46c11.046 0 20 8.954 20 20s-8.954 20-20 20h-132c-11.046 0-20-8.954-20-20s8.954-20 20-20h46v-41h-36c-11.046 0-20-8.954-20-20s8.954-20 20-20h91.305c12.851 0 25.847-.703 38.627-2.09l81.027-8.793c.717-.078 1.437-.117 2.158-.117 26.34 0 50.874 9.065 70.952 26.215l22.92 19.577c8.4 7.174 9.393 19.799 2.219 28.198zm-182.208 269.01c0 11.046-8.954 20-20 20h-30v30c0 11.046-8.954 20-20 20s-20-8.954-20-20v-30h-30c-11.046 0-20-8.954-20-20s8.954-20 20-20h30v-30c0-11.046 8.954-20 20-20s20 8.954 20 20v30h30c11.046 0 20 8.954 20 20zm252-150.447c0 33.331-26.916 60.447-60 60.447s-60-27.117-60-60.447c0-9.654 3.071-26.782 29.624-63.896 7.015-9.804 18.37-15.657 30.376-15.657s23.361 5.853 30.376 15.657c26.553 37.114 29.624 54.241 29.624 63.896zm-40 .013c-.01-.233-.615-9.886-20-37.588-19.526 27.905-19.998 37.495-20 37.592 0 11.257 8.972 20.43 20 20.43 11.024 0 19.993-9.165 20-20.434z">
                                     </path>
                                 </svg>
-                            </span>
-                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-8">
+                            </span>-->
+                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-8"><i class="fa-solid fa-clipboard"></i>&nbsp;&nbsp;
                                 Terapeuta</h2>
                             <p class="u-text u-text-body-alt-color u-text-9">Profesional que se dedica a brindar
                                 asistencia a pacientes que demandan atención por problemas físicos o mentales y cuya
@@ -189,9 +187,9 @@ $host = $_SERVER['HTTP_HOST'];?>
         <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-2">
             <div class="u-gutter-0 u-layout">
                 <div class="u-layout-row">
-                    <div class="u-container-style u-layout-cell u-left-cell u-palette-1-base u-size-20 u-layout-cell-3">
+                    <div class="u-container-style u-layout-cell u-left-cell u-palette-1-base u-palette-9-base u-size-20 u-layout-cell-3">
                         <div class="u-container-layout u-valign-top u-container-layout-3">
-                            <span class="u-icon u-icon-circle u-text-palette-1-base u-white u-icon-1">
+                            <!--<span class="u-icon u-icon-circle u-text-palette-1-base u-white u-icon-1">
                                 <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
                                     viewBox="0 0 512.002 512.002" style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bc6e"></use>
@@ -239,18 +237,18 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         </path>
                                     </g>
                                 </svg>
-                            </span>
-                            <h2 class="u-align-center u-custom-font u-font-roboto-condensed u-text u-text-4">Coach</h2>
+                            </span>-->
+                            <h2 class="u-align-center u-custom-font u-font-roboto-condensed u-text u-text-4"><i class="fa-solid fa-dumbbell"></i>&nbsp;&nbsp;Coach</h2>
                             <p class="u-align-center u-text u-text-5">Profesional que ayuda a otras personas a conseguir
                                 los objetivos que se han propuesto.</p>
-                            <a href="#" class="u-btn u-button-style u-text-palette-1-base u-white u-btn-2">Agenda
+                            <a href="#" class="u-btn u-button-style u-text-palette-9-base u-white u-btn-2">Agenda
                                 Cita</a>
                         </div>
                     </div>
                     <div
-                        class="u-align-center u-container-style u-layout-cell u-palette-4-base u-size-20 u-layout-cell-4">
+                        class="u-align-center u-container-style u-layout-cell u-palette-4-base u-palette-10-base u-size-20 u-layout-cell-4">
                         <div class="u-container-layout u-valign-top u-container-layout-4">
-                            <span class="u-icon u-icon-circle u-text-palette-4-base u-white u-icon-2">
+                            <!--<span class="u-icon u-icon-circle u-text-palette-4-base u-white u-icon-2">
                                 <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
                                     viewBox="0 0 511.988 511.988" style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e4e7"></use>
@@ -274,18 +272,18 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         </path>
                                     </g>
                                 </svg>
-                            </span>
-                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-6">Mentor</h2>
+                            </span>-->
+                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-6"><i class="fa-solid fa-arrows-split-up-and-left"></i>&nbsp;&nbsp;Mentor</h2>
                             <p class="u-text u-text-7">Profesional y competente que comparte su experiencia para ayudar
                                 a los demás.</p>
-                            <a href="#" class="u-btn u-button-style u-text-palette-4-base u-white u-btn-3">Agenda
+                            <a href="#" class="u-btn u-button-style u-text-palette-10-base u-white u-btn-3">Agenda
                                 Cita</a>
                         </div>
                     </div>
                     <div
-                        class="u-align-center u-container-style u-layout-cell u-palette-3-base u-right-cell u-size-20 u-layout-cell-5">
+                        class="u-align-center u-container-style u-layout-cell u-palette-3-base u-palette-11-base u-right-cell u-size-20 u-layout-cell-5">
                         <div class="u-container-layout u-valign-top u-container-layout-5">
-                            <span class="u-icon u-icon-circle u-text-palette-3-base u-white u-icon-3">
+                            <!--<span class="u-icon u-icon-circle u-text-palette-3-base u-white u-icon-3">
                                 <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"
                                     style="">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-34e4"></use>
@@ -295,12 +293,12 @@ $host = $_SERVER['HTTP_HOST'];?>
                                         d="m262.761 172h-159.534c-28.305 0-55.234 12.216-73.884 33.516-18.661 21.313-27.217 49.644-23.475 77.729l17.965 134.802c3.467 26.011 16.244 49.856 35.979 67.143 19.737 17.289 45.054 26.81 71.287 26.81h103.789c26.233 0 51.551-9.521 71.288-26.81 19.734-17.287 32.512-41.132 35.978-67.143l17.966-134.803c3.742-28.084-4.814-56.415-23.476-77.728-18.649-21.3-45.579-33.516-73.883-33.516zm57.709 105.96-17.966 134.803c-4.5 33.77-33.568 59.236-67.616 59.236h-103.789c-34.048 0-63.116-25.466-67.616-59.237l-17.965-134.801c-2.22-16.656 2.854-33.457 13.919-46.095 11.055-12.625 27.016-19.866 43.79-19.866h159.533c16.774 0 32.735 7.241 43.79 19.866 11.066 12.638 16.139 29.439 13.92 46.094zm116.732-203.97c-3.956 4.631-9.569 7.01-15.218 7.011-4.595 0-9.212-1.575-12.979-4.793l-22.92-19.577c-12.479-10.659-27.657-16.395-43.957-16.623l-79.887 8.669c-14.208 1.541-28.655 2.323-42.942 2.323h-15.305v41h46c11.046 0 20 8.954 20 20s-8.954 20-20 20h-132c-11.046 0-20-8.954-20-20s8.954-20 20-20h46v-41h-36c-11.046 0-20-8.954-20-20s8.954-20 20-20h91.305c12.851 0 25.847-.703 38.627-2.09l81.027-8.793c.717-.078 1.437-.117 2.158-.117 26.34 0 50.874 9.065 70.952 26.215l22.92 19.577c8.4 7.174 9.393 19.799 2.219 28.198zm-182.208 269.01c0 11.046-8.954 20-20 20h-30v30c0 11.046-8.954 20-20 20s-20-8.954-20-20v-30h-30c-11.046 0-20-8.954-20-20s8.954-20 20-20h30v-30c0-11.046 8.954-20 20-20s20 8.954 20 20v30h30c11.046 0 20 8.954 20 20zm252-150.447c0 33.331-26.916 60.447-60 60.447s-60-27.117-60-60.447c0-9.654 3.071-26.782 29.624-63.896 7.015-9.804 18.37-15.657 30.376-15.657s23.361 5.853 30.376 15.657c26.553 37.114 29.624 54.241 29.624 63.896zm-40 .013c-.01-.233-.615-9.886-20-37.588-19.526 27.905-19.998 37.495-20 37.592 0 11.257 8.972 20.43 20 20.43 11.024 0 19.993-9.165 20-20.434z">
                                     </path>
                                 </svg>
-                            </span>
-                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-8">
+                            </span> -->
+                            <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-8"><i class="fa-solid fa-leaf"></i>&nbsp;&nbsp;
                                 Nutriologo</h2>
                             <p class="u-text u-text-body-alt-color u-text-9">Elabora guías de alimentación según los
                                 requerimientos de los atletas o persona en general deacuerdo a sus necesidades.</p>
-                            <a href="#" class="u-btn u-button-style u-text-palette-3-base u-white u-btn-4">Agenda
+                            <a href="#" class="u-btn u-button-style u-text-palette-11-base u-white u-btn-4">Agenda
                                 Cita</a>
                         </div>
                     </div>
@@ -319,6 +317,15 @@ $host = $_SERVER['HTTP_HOST'];?>
     </section>
 
     <!--  Modales  -->
+    
+    <div id="menu" class="oculto">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      
     <div id="modallogin" class="modal">
         <div class="contenedorModal">
                 <div class="headModal">
@@ -356,6 +363,7 @@ $host = $_SERVER['HTTP_HOST'];?>
         </div>
     </div>
     <script>
+        
         const cerrarLogin = document.querySelector(".close").addEventListener("click", () => {
             document.querySelector("#modallogin").style.display = "none"
         })
@@ -374,6 +382,15 @@ $host = $_SERVER['HTTP_HOST'];?>
             document.querySelector(".circleC").style.display = "inline-block"
             document.querySelector(".circleP").style.display = "none"
         })
+        
+  $(document).ready(function() {
+    $('a.desplegar-menu').click(function() {
+      $('#menu').toggleClass('oculto');
+      return false;
+    });
+  });
+
+
     </script>
 </body>
 
