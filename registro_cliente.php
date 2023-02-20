@@ -17,8 +17,7 @@
 <body>
   <header>
     <div class="header">
-      <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"
-          class="u-logo-image u-logo-image-1"></a>
+      <a href="./index.php" class="u-image u-logo u-image-1"><img src="./src/images/default-logo.png"class="u-logo-image u-logo-image-1"></a>
       <div class="u-nav-container">
         <a class="user" href="./inicio_sesion.html"><i style="color: black" class="fa-solid fa-user"></i></a>
       </div>
@@ -27,29 +26,29 @@
 
   <div class="contenedor-textbox">
     <div class="textbox">
-      <h1 style="font-weight: bold;">Registro</h1>
+      <h1 style="font-weight: bold; border-bottom: 1px solid #e0dbdb; padding-bottom: 1px;">Registro</h1>
 
       <form class="Registro" action="./src/php/registro.php" method="post">
         <div class="tipoDeCuenta">
           <input type="radio" value="cliente" id="cliente" name="cuenta"/>
-          <label class="bC" for="cliente"><i class="fa-regular fa-circle circleC"></i><i class="fa-solid fa-check checkC"></i> Cliente</label>
+          <label class="bC" for="cliente"><i class="fa-regular fa-circle circleC"></i><i class="fa-solid fa-check checkC" style="display: none;"></i> Cliente</label>
         </div>
         <div class="tipoDeCuenta">
           <input type="radio" value="proveedor" id="proveedor" name="cuenta" />
-          <label class="bP" for="proveedor"><i class="fa-regular fa-circle circleP"></i><i class="fa-solid fa-check checkP"></i>Proveedor</label>
+          <label class="bP" for="proveedor"><i class="fa-regular fa-circle circleP"></i><i class="fa-solid fa-check checkP" style="display: none;"></i>Proveedor</label>
         </div>
 
         <div class="registroForm">
-          <label id="icon" for="email"><i class="envelope-icon "><i class="fa-solid fa-envelope"></i></label>
-              <input type="email" name="email" id="name" placeholder="Email" required />
-              <label id="icon" for="nombre"><i class="usuario-icon"><i class="fa-solid fa-user"></i></label>
+              <label id="icon" for="email"><i class="envelope-icon "></i><i class="fa-solid fa-envelope"></i></label>
+              <input type="email" name="email" id="email" placeholder="Email" required />
+              <label id="icon" for="nombre"><i class="usuario-icon"></i><i class="fa-solid fa-user"></i></label>
               <input type="text" name="nombre" id="name" placeholder="Nombre" required />
-              <label id="icon" for="contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
-              <input type="password" name="contraseña" id="name" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+              <label id="icon" for="contraseña"><i class="shield-icon"></i><i class="fa-solid fa-key"></i></label>
+              <input type="password" name="contraseña" id="password" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                           title="La contraseña debe contener al menos una letra mayuscula, una minuscula, un dígito y minimo 8 caracteres"  required />
-              <label id="icon" for="confirm-contraseña"><i class="shield-icon"><i class="fa-solid fa-key"></i></label>
-              <input type="password" name="confirm-contraseña" id="name" placeholder="Confirmar contraseña" required />
-              <label id="icon" for="telefono"><i class="shield-icon"><i class="fa-solid fa-phone"></i></label>
+              <label id="icon" for="confirm-contraseña"><i class="shield-icon"></i><i class="fa-solid fa-key"></i></label>
+              <input type="password" name="confirm-contraseña" id="password2" placeholder="Confirmar contraseña" required />
+              <label id="icon" for="telefono"><i class="shield-icon"></i><i class="fa-solid fa-phone"></i></label>
               <select class="pais_tel" name="pais" id="pais_tel" required>
                     <option></option>
                     <option value="+93">Afganistán</option>
@@ -424,16 +423,17 @@
                 </div>
                   <input type="submit" value="Registrarse" class="boton">
             </div>
-          </div>
-       
+        </div>
       </form>
     </div>
     </div>
+
+    <script src="./src/js/registro.js"></script>
   
 </body>
 <script>
-  var pais = document.getElementById('pais_tel');
-  var telf = document.getElementById('telf');
+  const pais = document.getElementById('pais_tel');
+  const telf = document.getElementById('telf');
   
   pais.onchange = function(e) {
       telf.value = this.value;
@@ -445,7 +445,7 @@
   }
   
   telf.onkeyup = function(e) {
-      var nums_v = this.value.match(/\d+/g);
+      const nums_v = this.value.match(/\d+/g);
       if (nums_v != null) {
           this.value = '+'+((nums_v).toString().replace(/\,/, ''));
       } else { 

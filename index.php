@@ -319,13 +319,13 @@
 
     <!--  Modales  -->
     
-    <div id="menu" class="oculto">
+    <!-- <div id="menu" class="oculto">
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Acerca de</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
-      </div>
+      </div> -->
       
     <div id="modallogin" class="modal">
         <div class="contenedorModal">

@@ -107,13 +107,54 @@ html{
 
 .tipoDeCuenta {
   display: flex;
-  padding-top: 10px;
+  align-items: center;
   justify-content: center;
+  font-weight: light;
+  border-bottom: 1px solid #cecaca;
+  padding-bottom: 1px;
 }
 
 .tipoDeCuenta label {
   padding-top: 2px;
+  font-size: 18px;
 }
+
+.tipoDeCuenta input {
+  display: none;
+}
+
+.tipoDeCuenta label:hover {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(113, 142, 197, 0.19);
+  color: #3158cc;
+}
+
+.checkP, .checkC {
+  display: none;
+  margin-right: 5px;
+}
+
+.circleP, .circleC {
+  color: #3158cc;
+  margin-right: 5px;
+}
+
+.bC, .bP {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.fa-check {
+  color: #2d7a3a;
+}
+
+input[type=radio]:checked + label {
+  box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.19);
+}
+
 
 .gender label {
   padding-top: 2px;
@@ -128,51 +169,10 @@ html{
   grid-template-columns: 1fr 2fr;
 }
 
-input[type=radio] {
-  visibility: hidden;
-}
-
 form{
   margin: 0 30px;
 }
 
-label.radio {
-	cursor: pointer;
-  text-indent: 35px;
-  overflow: visible;
-  display: inline-block;
-  position: relative;
-  margin-bottom: 15px;
-}
-
-label.radio:before {
-  background: #3a57af;
-  content:'';
-  position: absolute;
-  top:2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-}
-
-label.radio:after {
-	opacity: 0;
-	content: '';
-	position: absolute;
-	width: 0.5em;
-	height: 0.25em;
-	background: transparent;
-	top: 7.5px;
-	left: 4.5px;
-	border: 3px solid #ffffff;
-	border-top: none;
-	border-right: none;
-}
-
-input[type=radio]:checked + label:after {
-	opacity: 1;
-}
 
 hr{
   color: #a9a9a9;
@@ -196,7 +196,6 @@ input[type=password]{
 }
 
 #icon{
-  background-image: url('.\src\images\envelope-icon-14.png');
   display: inline-block;
   width: 30px;
   background-color: #3a57af;
@@ -254,6 +253,17 @@ a .button:hover {
   background-color:#2e458b;
   box-shadow: none;
   
+}
+
+.Registro {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.registroForm {
+  grid-column: 1/-1;
 }
 
 .pais {
