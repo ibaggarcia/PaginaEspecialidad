@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./src/css/modal.css" media="screen">
     <link rel="stylesheet" href="./src/css/vista.css" media="screen">
     <link rel="stylesheet" href="./src/css/Casa.css" media="screen">
+    <link rel="shortcut icon" href="./src/images/favicon.ico">
     <meta name="generator" content="Nicepage 5.4.4, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -29,8 +30,8 @@
                     echo $_SESSION['Usuario'];
                     echo "<a class='user desplegar-menu' href='#' data-target='modalusuario'><i style='color: black' class='fa-solid fa-user'></i></a>";
                 }else{
-                    echo "<a href='#' data-target='modallogin' class='user bottonA'>Acceder</a>&nbsp;";
-                    echo "<a href='./registro_cliente.php' class=' bottonA'>Registrarse</a>";
+                    echo "<a href='#' data-target='modallogin' class='user buttonA'>Acceder</a>&nbsp;";
+                    echo "<a href='./registro_cliente.php' class=' buttonA'>Registrarse</a>";
                 }?>
                 <!--<a data-target="modallogin" class="user"><i style="color: black; font-size: 30px;" class="fa-solid fa-user"></i></a>-->
             </div>
@@ -362,36 +363,6 @@
                 </form>
         </div>
     </div>
-    <script>
-        
-        const cerrarLogin = document.querySelector(".close").addEventListener("click", () => {
-            document.querySelector("#modallogin").style.display = "none"
-        })
-        const abrirLogin = document.querySelector(".fa-login").addEventListener("click", () => {
-            document.querySelector("#modallogin").style.display = "grid"
-        })
-        const checkC = document.querySelector("#cliente").addEventListener("click", () => {
-            document.querySelector(".checkC").style.display = "inline-block"
-            document.querySelector(".checkP").style.display = "none"
-            document.querySelector(".circleP").style.display = "inline-block"
-            document.querySelector(".circleC").style.display = "none"
-        })
-        const checkP = document.querySelector("#proveedor").addEventListener("click", () => {
-            document.querySelector(".checkP").style.display = "inline-block"
-            document.querySelector(".checkC").style.display = "none"
-            document.querySelector(".circleC").style.display = "inline-block"
-            document.querySelector(".circleP").style.display = "none"
-        })
-        
-  $(document).ready(function() {
-    $('a.desplegar-menu').click(function() {
-      $('#menu').toggleClass('oculto');
-      return false;
-    });
-  });
-
-
-    </script>
 </body>
 
 </html>

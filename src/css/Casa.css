@@ -189,15 +189,22 @@
   flex-grow: 1;
 }
 
-.bottonA {
+.buttonA {
   display: inline-block;
-  background-color: #3b93f1;
-  color: #fff;
+  background-color: #fff;
+  color: #3b93f1;
   padding: 10px 20px;
   border-radius: 5px;
+  border: 1px solid #3b93f1;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+}
+
+.buttonA:hover {
+  background-color: #3b93f1;
+  color: #fff;
+  border: none;
 }
 
 .u-nav-container {
@@ -598,4 +605,11 @@
     font-size: 3.75rem;
   }
 
+}
+
+@media (max-width: 385px) {
+    .buttonA {
+      font-size: 13px;
+      padding: 10px 10px;
+    }
 }

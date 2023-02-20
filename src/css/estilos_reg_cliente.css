@@ -5,17 +5,23 @@
 }
 
 html {
-  background: linear-gradient(90deg, rgba(21,89,205,1) 4%, rgba(0,212,255,1) 56%, rgba(0,212,255,1) 85%);
+  background: rgb(216,219,226);
+  background: linear-gradient(90deg, rgba(216,219,226,1) 8%, rgba(244,247,247,1) 49%, rgba(224,217,217,1) 99%);
 }
 
 body {
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 10px 1fr 10px;
   grid-template-rows: 80px 1fr;
-  row-gap: 100px;
+  /* row-gap: 100px; */
   min-width: 360px;
+  background-image: url("../images/sd-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
 }
 
 header {
@@ -57,9 +63,16 @@ header {
   font-size: 30px;
 }
 
-.testbox {
-  min-width: 300px;
+.contenedor-textbox {
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.textbox {
+  min-width: 300px;
+  grid-column: 3/-1;
   box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
 }
 
@@ -82,7 +95,7 @@ html{
   background-color: #ffffff;
 }
 
-.testbox {
+.textbox {
   margin: 20px auto;
   width: 343px; 
   height: 650px; 
@@ -271,20 +284,28 @@ a .button:hover {
   margin-right: 0;
 }
 
-<<<<<<< HEAD
-body {
-  height:665px;
-  background-image: url("https://carontestudio.com/img/caronte-web-estudio-logo.png");
-  background-size: 10rem;
-  
-=======
->>>>>>> ad843ad9e3f53e0349cc9795d2d9200e82671c1f
-@media (max-height: 700px) {
+@media (max-height: 750px) {
   body {
-    row-gap: 0;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contenedor-textbox {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .testbox {
-    height: 560px;
+  .textbox {
+    grid-column: 2/-1;
+  }
+}
+
+@media (max-width: 650px) {
+  .contenedor-textbox {
+    grid-template-columns: 1fr;
+  }
+
+  .textbox {
+    grid-column: 1/-1;
   }
 }
