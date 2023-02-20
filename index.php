@@ -1,3 +1,6 @@
+<?php
+session_start();
+$host = $_SERVER['HTTP_HOST'];?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,7 +31,7 @@
             <div class="u-nav-container">
                 <?php if (isset($_SESSION['Usuario'])){
                     echo $_SESSION['Usuario'];
-                    echo "<a class='user desplegar-menu' href='#' data-target='modalusuario'><i style='color: black' class='fa-solid fa-user'></i></a>";
+                    echo "<a class='user desplegar-menu' href='./src/php/logout.php' data-target='modalusuario'><i style='color: black' class='fa-solid fa-user'></i></a>";
                 }else{
                     echo "<a href='#' data-target='modallogin' class='user buttonA'>Acceder</a>&nbsp;";
                     echo "<a href='./registro_cliente.php' class=' buttonA'>Registrarse</a>";
@@ -354,7 +357,6 @@
                         </div>
                         <div class="M-3">
                             <input type="submit" value="Iniciar sesión" class="boton btnlog">
-                            <a href="./registro_cliente.php" class="button btnlog">Registrate</a>
                         </div>
                         <div class="M-4">
                             <a href="./recuperacion.html" class="button btnlog">Olvidaste tu contraseña?</a>

@@ -25,12 +25,16 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             header("location: http://$host/PaginaEspecialidad/index.php");
         }
     }elseif($tipo_usuario == "proveedor"){
-        $consulta = "SELECT email, contraseña FROM proveedor WHERE email = '$email' AND contraseña = '$contraseña'";
+        $consulta = "SELECT id_proveedor, email, contraseña FROM proveedor WHERE email = '$email' AND contraseña = '$contraseña'";
         $query_result = mysqli_query($conn, $consulta);
         $row = mysqli_fetch_array($query_result);
         if ($row != ""){
-            $_SESSION['Usuario'] = $row['nombre'];
-            header("location: http://$host/PaginaEspecialidad/index.php");
+            $id = $row['id_proveedor'];
+            $consulta = "SELECT nombre FROM proveedor WHERE id_proveedor = '$id'";
+            $query_result = mysqli_query($conn, $consulta);
+            $usuario = mysqli_fetch_array($query_result);
+            $_SESSION['Usuario'] = $usuario['nombre'];
+            header("location: http://$host/PaginaEspecialidad/perfil1.php");
         }else{
             $_SESSION['mensaje'] = "El correo y/o la contraseña son incorrectos...";
             $_SESSION['color'] = 'danger';

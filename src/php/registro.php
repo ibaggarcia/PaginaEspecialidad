@@ -68,7 +68,7 @@ if ($rs) {
     $_SESSION['mensaje'] = "Registro exitoso! Ahora inicia sesión.";
     $_SESSION['color'] = 'success';
     $_SESSION['destroy'] = true;
-    echo "<script>alert('Registro exitoso!');window.location = 'http://$host/PaginaEspecialidad/index.html'</script>";
+    echo "<script>alert('Registro exitoso!');window.location = 'http://$host/PaginaEspecialidad/index.php'</script>";
 } else {
     echo "<script>alert('Ocurrió un error, vuelve a intentarlo...');window.location = '../../registro_cliente.php'</script>";
 }
